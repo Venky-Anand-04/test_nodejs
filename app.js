@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/signup", (req, res) => {
-  res.sendFile(__dirname + "/public/ssologin.html");
+  res.sendFile(`${process.cwd()}/public/ssologin.html`);
 });
 
 app.listen(process.env.PORT || 3000, () => {
