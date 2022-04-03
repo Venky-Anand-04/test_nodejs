@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data {
+  display: none;
+  border: 4px solid #e8b3b3;
+  border-radius: 15px;
+  width: 50%;
+  height: 75vh;
+  margin: 5rem;
+  /* padding: 10rem; */
+}
+
+.formcontainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25rem;
+  justify-items: space-around;
+}
+.formcontainer > .preference > img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50px;
+}
+.formcontainer > .preference > p {
+  font-size: 20px;
+}
+
+.preference {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  margin: 0.5rem;
+}
+
+.signout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+button {
+  background: #e8b4b4;
+  border-radius: 14px;
+  width: 267px;
+  height: 64px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+button:hover {
+  transform: scale(1.2);
+}
+.g-signin2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
