@@ -11,6 +11,6 @@ app.get("/signup", (req, res) => {
   res.sendFile(__dirname + "/public/ssologin.html");
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("App is listening on port 3000");
 });
