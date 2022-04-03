@@ -3,32 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="google-signin-client_id"
+      content="233963093057-1g9kmjh3l8df4q439dvs94j9n7jd8ldg.apps.googleusercontent.com"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Choices</title>
+    <link rel="stylesheet" href="./sso.css" />
+    <title>Login Page</title>
   </head>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-    body {
-      font-family: "Poppins", sans-serif;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    li {
-      list-style-type: none;
-    }
-    a {
-      text-decoration: none;
-    }
-  </style>
   <body>
-    <div>
-      <h2>Hello There!</h2>
-      <ul>
-        <li><a href="http://localhost:3000/signup"> 👉 SSO Login</a></li>
-      </ul>
+    <script src="./sso.js" defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <div class="g-signin2" id="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="data" id="data">
+      <div class="formcontainer">
+        <div class="preference one">
+          <h3>Name:</h3>
+          <p id="name"></p>
+        </div>
+        <div class="preference">
+          <h3 for="email">Email:</h3>
+          <p id="email"></p>
+        </div>
+        <div class="preference">
+          <!-- <label for="image">Profile Pic</label> -->
+          <img id="image" width="100" height="100" alt="Profile Picture" />
+        </div>
+      </div>
+      <div class="signout">
+        <button type="button" onclick="signOut();">Sign Out</button>
+      </div>
     </div>
   </body>
 </html>
